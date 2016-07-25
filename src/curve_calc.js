@@ -20,6 +20,11 @@ function getCurvePoints(points, tension, numOfSeg, close) {
 
 	'use strict';
 
+	// just return an empty list of no points are passed
+	if (!points || points.length === 0) {
+		return [];
+	}
+
 	// options or defaults
 	tension = (typeof tension === 'number') ? tension : 0.5;
 	numOfSeg = (typeof numOfSeg === 'number') ? numOfSeg : 25;
